@@ -10,6 +10,7 @@ describe("Calculator - Test", function() {
     it("Testing the sum operation", function() {
       expect(calculator.add(1,1)).to.equal(1+1);
     });
+    
 
     it("Testing the minus operation", function() {
       expect(calculator.minus(1,1)).to.equal(1-1);
