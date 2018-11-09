@@ -2,9 +2,11 @@
   "name": "servernode",
   "version": "1.0.0",
   "description": "\"# BasicExpressjs\"",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,10 @@
     "url": "https://github.com/csepul/BasicExpressjs/issues"
   },
   "homepage": "https://github.com/csepul/BasicExpressjs#readme",
-  "dependencies": {
-    "express": "^4.16.4"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1"
+  }
 }

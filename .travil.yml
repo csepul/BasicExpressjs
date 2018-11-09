@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "6"
+jdk:
+  - oraclejdk8
+addons:
+  sonarcloud: true
+script:
+  - npm run cover
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.organization=csepul-github -Dsonar.projectKey=csepul_BasicExpressjs -Dsonar.sources='./app' -X
+after_success:
+  - npm run coveralls
